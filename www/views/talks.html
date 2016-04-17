@@ -1,0 +1,22 @@
+<style>
+	#co-talks{
+		width: 100%;
+		max-width: 600px;
+		border: 1px solid #ccc;
+
+	}
+	.talk{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+</style>
+
+
+<div id="co-talks">
+	<a ng-href="#/chat/{{talk.contact_name}}" ng-repeat="talk in talks" class="talk">
+		<div>{{talk.contact_name}}</div>
+		<div>{{talk.unread}}</div>
+	</a>
+</div>
