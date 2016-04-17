@@ -64,7 +64,7 @@ angular.module('myApp', [
         .otherwise({
             redirectTo: '/talks'
         });
-        function skipIfLoggedIn($q, Auth) {
+        function skipIfLoggedIn($q, $location, Auth) {
 
             var deferred = $q.defer();
             if (Auth.isAuthenticated()) {
